@@ -26,22 +26,19 @@ public class Browsers {
 	public void launchChromeBrowser() {
 
 		String filepath = getUserDir();
-		filepath = filepath + "\\src\\Drivers\\chromedriver.exe";
+		filepath = filepath + "\\\\src\\\\Drivers\\\\chromedriver.exe";
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\hswaroopkato\\git\\CloudWork\\src\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", filepath);
 		driver = new ChromeDriver();
 		HandlingAvayaLogin.VPNHome(driver);
-
 	}
 
 	public void launchFireFoxBrowser() {
 
 		String filepath = getUserDir();
-		filepath = filepath + "\\src\\Drivers\\geckodriver.exe";
+		filepath = filepath + "\\\\src\\\\Drivers\\\\geckodriver.exe";
 
-		System.setProperty("webdriver.firefox.marionette",
-				"C:\\Users\\hswaroopkato\\git\\CloudWork\\src\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.firefox.marionette", filepath);
 		driver = new FirefoxDriver();
 		HandlingAvayaLogin.VPNHome(driver);
 	}
@@ -49,10 +46,9 @@ public class Browsers {
 	public void launchExplorerBrowser() {
 
 		String filepath = getUserDir();
-		filepath = filepath + "\\src\\Drivers\\IEDriverServer.exe";
+		filepath = filepath + "\\\\src\\\\Drivers\\\\IEDriverServer.exe";
 
-		System.setProperty("webdriver.firefox.marionette",
-				"C:\\Users\\hswaroopkato\\git\\CloudWork\\src\\Drivers\\IEDriverServer.exe");
+		System.setProperty("webdriver.firefox.marionette", filepath);
 		driver = new InternetExplorerDriver();
 		HandlingAvayaLogin.VPNHome(driver);
 	}
