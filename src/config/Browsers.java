@@ -1,4 +1,4 @@
-package hpackage;
+package config;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,9 +7,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Browsers {
 
-	public static WebDriver driver;
+	private static WebDriver driver;
 
-	public void initBrowser(String browser) {
+	public static WebDriver InitDriver(String browser) {
+		initBrowser(browser);
+		return driver;
+	}
+
+	private static void initBrowser(String browser) {
 		switch (browser) {
 		case "Chrome":
 			launchChromeBrowser();
@@ -23,7 +28,7 @@ public class Browsers {
 		}
 	}
 
-	public void launchChromeBrowser() {
+	private static void launchChromeBrowser() {
 
 		String filepath = getUserDir();
 		filepath = filepath + "\\\\src\\\\Drivers\\\\chromedriver.exe";
@@ -33,7 +38,7 @@ public class Browsers {
 		HandlingAvayaLogin.VPNHome(driver);
 	}
 
-	public void launchFireFoxBrowser() {
+	private static void launchFireFoxBrowser() {
 
 		String filepath = getUserDir();
 		filepath = filepath + "\\\\src\\\\Drivers\\\\geckodriver.exe";
@@ -43,7 +48,7 @@ public class Browsers {
 		HandlingAvayaLogin.VPNHome(driver);
 	}
 
-	public void launchExplorerBrowser() {
+	private static void launchExplorerBrowser() {
 
 		String filepath = getUserDir();
 		filepath = filepath + "\\\\src\\\\Drivers\\\\IEDriverServer.exe";
@@ -53,7 +58,7 @@ public class Browsers {
 		HandlingAvayaLogin.VPNHome(driver);
 	}
 
-	public static String getUserDir() {
+	private static String getUserDir() {
 		String tempPath = System.getProperty("user.dir");
 		return tempPath.replace("\\", "\\\\");
 	}

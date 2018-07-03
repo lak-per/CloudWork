@@ -1,4 +1,4 @@
-package hpackage;
+package config;
 
 import java.util.concurrent.TimeUnit;
 
