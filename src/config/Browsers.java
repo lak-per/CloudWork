@@ -58,7 +58,7 @@ public class Browsers {
 		HandlingAvayaLogin.VPNHome(driver);
 	}
 
-	private static String getUserDir() {
+	public static String getUserDir() {
 		String tempPath = System.getProperty("user.dir");
 		return tempPath.replace("\\", "\\\\");
 	}

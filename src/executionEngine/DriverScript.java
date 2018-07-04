@@ -10,7 +10,7 @@ import pages.A1SLoginPage;
 
 public class DriverScript {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
 		String A1S_URL = "https://app8vo.avaya.com/ec/default.aspx";
