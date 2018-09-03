@@ -23,8 +23,8 @@ public class HandlingAvayaLogin {
 				LoginWait.until(ExpectedConditions.visibilityOfElementLocated(By
 						.name("Submit")));
 
-				driver.findElement(By.id("email")).sendKeys("hswaroopkato");
-				driver.findElement(By.id("password")).sendKeys("Scarlett31");
+				driver.findElement(By.id("email")).sendKeys("Provide User Name");
+				driver.findElement(By.id("password")).sendKeys("Provide User Password");
 				driver.findElement(By.xpath("//input[@name='Submit']")).click();
 
 				driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
